@@ -58,13 +58,14 @@ Be sure to include any preliminary setup information, such as installing depende
 
 
 4) Run puppeth, name your network, and select the option to configure a new genesis block.
+![image](https://user-images.githubusercontent.com/63059287/106403676-dd8fda00-63fd-11eb-96fc-db749c46589e.png)
 
 
 5) Choose the Clique (Proof of Authority) consensus algorithm.
-
+![image](https://user-images.githubusercontent.com/63059287/106403743-1fb91b80-63fe-11eb-8450-d475db332586.png)
 
 6) Paste both account addresses from the first step one at a time into the list of accounts to seal.
-![Puppeth]https://github.com/gerdonr/bankchainn_blockchain/blob/main/screenshots/1.png?raw=true
+
 
 7) Paste them again in the list of accounts to pre-fund. There are no block rewards in PoA, so you'll need to pre-fund.
 
@@ -76,18 +77,25 @@ Be sure to include any preliminary setup information, such as installing depende
 
 
 10) Export genesis configurations. This will fail to create two of the files, but you only need networkname.json.
+![image](https://user-images.githubusercontent.com/63059287/106403797-5131e700-63fe-11eb-958c-3786aa6459bb.png)
 
 
 11) You can delete the networkname-harmony.json file.
 
 
 12) Initialize each node with the new networkname.json with geth.
+![image](https://user-images.githubusercontent.com/63059287/106403857-8c341a80-63fe-11eb-861b-81d0a1ffe2d6.png)
+**Initializing node1
 
+![image](https://user-images.githubusercontent.com/63059287/106403878-abcb4300-63fe-11eb-85bd-d82d8e26cf39.png)
+**Initializing node2
 
 13) Run the first node, unlock the account, enable mining, and the RPC flag. Only one node needs RPC enabled.
+![image](https://user-images.githubusercontent.com/63059287/106403905-ce5d5c00-63fe-11eb-8a54-3a216012f86e.png)
 
 
 14) Set a different peer port for the second node and use the first node's enode address as the bootnode flag.
+![image](https://user-images.githubusercontent.com/63059287/106403942-e503b300-63fe-11eb-89d4-0c8ccfdef858.png)
 
 
 15) Be sure to unlock the account and enable mining on the second node!
@@ -104,18 +112,22 @@ Be sure to include any preliminary setup information, such as installing depende
 
 
 2) You will need to use a custom network, and include the chain ID, and use ETH as the currency.
+![image](https://user-images.githubusercontent.com/63059287/106403956-f3ea6580-63fe-11eb-950a-6fb5b23e7485.png)
 
 
 3) Import the keystore file from the node1/keystore directory into MyCrypto. This will import the private key.
+![image](https://user-images.githubusercontent.com/63059287/106403973-0795cc00-63ff-11eb-84ba-b15273299064.png)
 
 
 4) Send a transaction from the node1 account to the node2 account.
+![image](https://user-images.githubusercontent.com/63059287/106404001-2a27e500-63ff-11eb-9c70-9723188becbd.png)
 
 
 5) Copy the transaction hash and paste it into the "TX Status" section of the app, or click "TX Status" in the popup.
 
 
 6) Screenshot the transaction metadata (status, tx hash, block number, etc) and save it to your Screenshots folder.
+![image](https://user-images.githubusercontent.com/63059287/106403986-18ded880-63ff-11eb-8644-99e7fe88f049.png)
 
 
 7) Celebrate, you just created a blockchain and sent a transaction!
