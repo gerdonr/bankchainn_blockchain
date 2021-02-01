@@ -45,55 +45,55 @@ Be sure to include any preliminary setup information, such as installing depende
 
 ## Instructions for the Team
 
-1) Setup the custom out-of-the-box blockchain
+### Setup the custom out-of-the-box blockchain
 
 
-2) Create a new project directory for your new network. Call it whatever you want!
+1) Create a new project directory for your new network. Call it whatever you want!
 
 
-3) Create a "Screenshots" folder inside of the project directory.
+2) Create a "Screenshots" folder inside of the project directory.
 
 
-4) Create accounts for two (or more) nodes for the network with a separate datadir for each using geth.
+3) Create accounts for two (or more) nodes for the network with a separate datadir for each using geth.
 
 
-5) Run puppeth, name your network, and select the option to configure a new genesis block.
+4) Run puppeth, name your network, and select the option to configure a new genesis block.
 
 
-6) Choose the Clique (Proof of Authority) consensus algorithm.
+5) Choose the Clique (Proof of Authority) consensus algorithm.
 
 
-7) Paste both account addresses from the first step one at a time into the list of accounts to seal.
+6) Paste both account addresses from the first step one at a time into the list of accounts to seal.
+![Puppeth]https://github.com/gerdonr/bankchainn_blockchain/blob/main/screenshots/1.png?raw=true
+
+7) Paste them again in the list of accounts to pre-fund. There are no block rewards in PoA, so you'll need to pre-fund.
 
 
-8) Paste them again in the list of accounts to pre-fund. There are no block rewards in PoA, so you'll need to pre-fund.
+8) You can choose no for pre-funding the pre-compiled accounts (0x1 .. 0xff) with wei. This keeps the genesis cleaner.
 
 
-9) You can choose no for pre-funding the pre-compiled accounts (0x1 .. 0xff) with wei. This keeps the genesis cleaner.
+9) Complete the rest of the prompts, and when you are back at the main menu, choose the "Manage existing genesis" option.
 
 
-10) Complete the rest of the prompts, and when you are back at the main menu, choose the "Manage existing genesis" option.
+10) Export genesis configurations. This will fail to create two of the files, but you only need networkname.json.
 
 
-11) Export genesis configurations. This will fail to create two of the files, but you only need networkname.json.
+11) You can delete the networkname-harmony.json file.
 
 
-12) You can delete the networkname-harmony.json file.
+12) Initialize each node with the new networkname.json with geth.
 
 
-13) Initialize each node with the new networkname.json with geth.
+13) Run the first node, unlock the account, enable mining, and the RPC flag. Only one node needs RPC enabled.
 
 
-14) Run the first node, unlock the account, enable mining, and the RPC flag. Only one node needs RPC enabled.
+14) Set a different peer port for the second node and use the first node's enode address as the bootnode flag.
 
 
-15) Set a different peer port for the second node and use the first node's enode address as the bootnode flag.
+15) Be sure to unlock the account and enable mining on the second node!
 
 
-16) Be sure to unlock the account and enable mining on the second node!
-
-
-17) You should now see both nodes producing new blocks, congratulations!
+16) You should now see both nodes producing new blocks, congratulations!
 
 
 
