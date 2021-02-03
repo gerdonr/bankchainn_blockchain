@@ -91,10 +91,14 @@ Be sure to include any preliminary setup information, such as installing depende
 **Initializing node2
 
 13) Run the first node, unlock the account, enable mining, and the RPC flag. Only one node needs RPC enabled.
+
+Here, the --unlock flag unlocks the mine, the --mine flag tells the node to start mining, the --rpc flag enables the http-rpc server, and the --allow-insecure-unlock flag allows insecure account unlocking when account-related RPC's are exposed by http.
 ![image](https://user-images.githubusercontent.com/63059287/106403905-ce5d5c00-63fe-11eb-8a54-3a216012f86e.png)
 
 
 14) Set a different peer port for the second node and use the first node's enode address as the bootnode flag.
+
+Here we unlock node2 and select a different port. The --bootnodes flag allows for P2P discovery of the other node. 
 ![image](https://user-images.githubusercontent.com/63059287/106403942-e503b300-63fe-11eb-89d4-0c8ccfdef858.png)
 
 
